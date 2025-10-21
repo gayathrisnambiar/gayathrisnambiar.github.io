@@ -19,8 +19,15 @@
     height: 100vh;
     background-color: white 30%;
     backdrop-filter: blur(0.4em);
+    display: flex;
+    flex-direction: column;
 }
 
 h1 {
     font-weight: 100;
+}
+
+.powered {
+    width: 10em;
+    padding-top: 2em;
 }
