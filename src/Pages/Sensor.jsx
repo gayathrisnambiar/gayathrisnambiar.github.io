@@ -1,4 +1,6 @@
 import { useRef, useEffect } from 'react';
+import phone from "../paired.png"
+import "./Sensor.css"
 
 function Sensor() {
   const audioRef = useRef(null);
@@ -9,8 +11,8 @@ function Sensor() {
 
   return (
     <div>
-      <h1>Sensor Page</h1>
       <audio ref={audioRef} src="/chime.mp3" />
+      <img src={phone} alt='paired' className='paired'/>
     </div>
   );
 }
