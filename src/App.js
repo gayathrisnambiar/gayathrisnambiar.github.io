@@ -1,17 +1,24 @@
 import './App.css';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import {Pairing, Sensor} from './Pages'
 
 function App() {
 
-  const [page, setPage] = useState('pairing');
+  const [showPairing, setShowPairing] = useState(true);
+  const audioRef = useRef(null);
+
+  const playAudio = () => {
+    audioRef && audioRef.current.play();
+  }
 
   const renderPage = () => {
-    if (page === 'pairing') {
-      return <Pairing navigateToSensorPage={() => setPage('sensor')} />;
-    } else if (page === 'sensor') {
-      return <Sensor />;
-    }
+    return (
+      <div className="renderPage">
+        {showPairing && <Pairing navigateToSensorPage={() => {setShowPairing(false); playAudio();}} />}
+        <Sensor />
+        <audio ref={audioRef} src="/chime.mp3" />
+      </div>
+    )
   }
 
   return (
