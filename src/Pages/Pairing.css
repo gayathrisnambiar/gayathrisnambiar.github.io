@@ -1,0 +1,19 @@
+.button {
+    font-size: 1em;
+    padding: 1em 5em;
+    border-radius: 0.3em;
+    border: 0.2em solid transparent;
+    background-color: #242029;
+    color:ivory;
+    font-family: 'Outfit';
+    font-weight: 600;
+}
+
+.pairing {
+    padding-top: 10em;
+    font-family: 'Outfit';
+}
+
+h1 {
+    font-weight: 100;
+}

@@ -1,8 +1,10 @@
+import "./Pairing.css"
 
 function Pairing({navigateToSensorPage}) {
   return (
-    <div>
-        <button onClick={navigateToSensorPage}>Pair Sensor</button>
+    <div className="pairing">
+        <h1>Sensor Paired</h1>
+        <button className="button" onClick={navigateToSensorPage}>Ok</button>
     </div>
   );
 }
